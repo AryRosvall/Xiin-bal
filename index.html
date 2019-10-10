@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Xíinbal</title>
+    </head>
+    <body>
+        <header class="header">
+            <img class="header__img" src="../assets/logo-platzi-video-BW2.png" alt="Xíinbal"/>
+            <div class="header__search">
+                <div class="header__search--input">
+                    <input type="text" class="input" placeholder="Buscar...">
+                </div>
+                <div class="header__search--btnContainer">
+                    <button class="header__search--btn">Buscar</button>
+                </div>
+            </div>
+            <section class="header__search--categories">
+                    <button class="header__search--categories_btn">Favoritos</button>
+                    <button class="header__search--categories_btn">Tendencias</button>
+                    <button class="header__search--categories_btn">Comida</button>
+                    <button class="header__search--categories_btn">Café</button>
+                    <button class="header__search--categories_btn">Nocturna</button>
+                    <button class="header__search--categories_btn">Diversión</button>
+                    <button class="header__search--categories_btn">Compras</button>
+                </section>
+            <div class="header__menu">
+              <div class="header__menu--profile">
+                <img src="../assets/user-icon.png" alt=""/>
+                <p>Perfil</p>
+              </div>
+              <ul>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+        </header>
+        <section class="filters">
+            <button class="filters__btn">Precio</button>
+            <button class="filters__btn">Abierto ahora</button>
+            <button class="filters__btn">Especiales</button>
+            <button class="filters__btn">No he estado</button>
+            <button class="filters__btn">Guardado</button>
+            <button class="filters__btn">Me gusta</button>
+        </section>
+        <section class="main">
+            <section class="places">
+                <h1>Más de 100 lugares</h1>
+                <div class="place__card">
+                    <div class="place__card--carousel">
+                        <img src="" alt="" class="place__card--img"/>
+                    </div>
+                    <div class="place__card--details">
+                        <h2>1. Los tulipanes</h2>
+                        <h3>Panadería | $$$$$</h3>
+                        <span>Av. Toluca 1070, Ciudad de México</span>
+                        <div>Opens at 10:00 AM</div>
+                        <div class="place__card--rating">9.6 (574)</div>
+                        <button class="place__card--save">Guardar</button>
+                    </div>
+                </div> 
+            </section>
+            <section class="map">
+                <div id="map"></div>
+            </section>
+        </section>
+        <footer class="footer">
+            <a href="/">Terminos de uso</a>
+            <a href="/">Declaración de privacidad</a>
+            <a href="/">Centro de ayuda</a>
+        </footer>
+        <script>
+                // Initialize and add the map
+                function initMap() {
+                  // The location of Uluru
+                  var uluru = {lat: -25.344, lng: 131.036};
+                  // The map, centered at Uluru
+                  var map = new google.maps.Map(
+                      document.getElementById('map'), {zoom: 4, center: uluru});
+                  // The marker, positioned at Uluru
+                  var marker = new google.maps.Marker({position: uluru, map: map});
+                }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmjvkXB_DMnBUNwxQztLMStyQmA_szbNw&callback=initMap">
+        </script>
+    </body>
+</html>
+
+
+
+    
+   
