@@ -5,7 +5,11 @@ import { createStore } from 'redux';
 import reducer from './reducers/index';
 import App from './routes/app';
 
-const Store = createStore(reducer, null);
+const InitialState = {
+  'user': {},
+}
+
+const Store = createStore(reducer, InitialState);
 
 ReactDOM.render(
   <Provider store={Store}>

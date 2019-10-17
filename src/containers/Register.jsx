@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-//import { registerRequest } from '../actions';
+import { registerRequest } from '../actions';
 import '../assets/styles/components/register.scss';
 
 const Register = (props) => {
@@ -61,10 +61,8 @@ const Register = (props) => {
   );
 }
 
-export default Register;
-
-/* const mapDispatchToProps = {
+const mapDispatchToProps = {
   registerRequest,
 };
 
-export default connect(null,mapDispatchToProps)(Register); */
+export default connect(null,mapDispatchToProps)(Register);
