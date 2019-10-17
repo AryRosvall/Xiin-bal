@@ -1,0 +1,65 @@
+$font-color: white;
+$background-color: linear-gradient(#543864, #b18ea6) fixed;
+$font-family: "Muli", sans-serif;
+$all: 100%;
+
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.notfound {
+    margin: 0,0;
+    height: $all;
+    background: $background-color;
+    font-family: $font-family;
+    color: $font-color;
+  @extend %flex-center;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh);
+  padding: 0 30px;
+}
+
+.notfound__subtitle {
+  font-size: 30px;
+  width: 500px;
+  text-align: center;
+}
+
+@keyframes notfoundFadeInOut {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.97);
+  }
+  35% {
+    transform: scale(0.9);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  55% {
+    transform: scale(0.9);
+  }
+  65% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notfound__title {
+  animation-name: notfoundFadeInOut;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  font-size: 100px;
+}

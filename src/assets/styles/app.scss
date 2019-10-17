@@ -1,0 +1,15 @@
+@import './vars.scss';
+@import './media.scss';
+
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    background: $background-color;
+  }
+  
+* {
+box-sizing: border-box;
+}
+
+
