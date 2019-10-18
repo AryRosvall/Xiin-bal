@@ -1,6 +1,10 @@
+@import '../vars.scss';
+@import '../media.scss';
 .main {
     display: grid;
     grid-template-columns: 55% 45%;
     height: auto;
     width: 100%;
+    
+  
   }

@@ -1,6 +1,8 @@
+@import '../vars.scss';
+@import '../media.scss';
+
 $font-color: white;
-$background-color: linear-gradient(#543864, #b18ea6) fixed;
-$font-family: "Muli", sans-serif;
+$background-color: $BGNotFound fixed;
 $all: 100%;
 
 %flex-center {
@@ -8,10 +10,8 @@ $all: 100%;
   align-items: center;
 }
 
-
-
 .notfound {
-    margin: 0,0;
+
     height: $all;
     background: $background-color;
     font-family: $font-family;
@@ -20,14 +20,11 @@ $all: 100%;
   flex-flow: column wrap;
   align-content: center;
   justify-content: center;
-  height: calc(100vh);
-  padding: 0 30px;
+  height: 85vh;
 }
 
 .notfound__subtitle {
   font-size: 30px;
-  width: 500px;
-  text-align: center;
 }
 
 @keyframes notfoundFadeInOut {

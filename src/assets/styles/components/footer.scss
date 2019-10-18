@@ -1,6 +1,9 @@
+@import '../vars.scss';
+@import '../media.scss';
+
 .footer {
     align-items: center;
-    background-color: red;
+    background-color:$header-color;
     display: flex;
     height: 50px;
     width: 100%;
@@ -10,7 +13,7 @@
   }
   
   .footer a {
-    color: black;
+    color: $font-color;
     cursor: pointer;
     font-size: 14px;
     padding-left: 30px;

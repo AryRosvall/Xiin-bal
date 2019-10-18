@@ -8,8 +8,7 @@ const NotFound = () => (
         404
     </div>
     <div className='notfound__subtitle'>
-        Upsi! No lo pude encontrar, intenta de nuevo vaquero!
-      <span aria-label='vaquero' role='img'>🤠</span>
+        PÁGINA NO ENCONTRADA
     </div>
   </section>
 );

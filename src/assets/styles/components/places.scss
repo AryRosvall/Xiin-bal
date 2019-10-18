@@ -1,6 +1,9 @@
+@import '../vars.scss';
+@import '../media.scss';
+
 .places {
     overflow-y: scroll;
-    height: 70vh;
+    height: 80vh;
   }
   
   .places h1 {
