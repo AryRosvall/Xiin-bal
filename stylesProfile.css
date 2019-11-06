@@ -29,6 +29,7 @@ body {
   justify-content: space-between;
   top: 0px;
   width: 100%;
+  border-bottom: 1px solid #e4e4e4;
 }
 
 .header__img {
@@ -254,6 +255,8 @@ body {
   display: flex;
   height: 100px;
   width: 100%;
+  bottom: 0;
+  position:fixed;
 }
 
 .footer a {
@@ -300,7 +303,7 @@ body {
 
 .profile__data{
   grid-area: data;
-  background-color: green;
+
 }
 
 .profile__favorites{
