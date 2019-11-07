@@ -1,7 +1,10 @@
+@import '../vars.scss';
+@import '../media.scss';
+
 #map {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    height: 80vh;
+    height: $placesHeight;
     position: relative;
   }

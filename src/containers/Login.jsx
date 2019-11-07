@@ -57,16 +57,16 @@ const Login = (props) => {
           No tienes ninguna cuenta
           <br />
           <Link to='/register'>
-            Regístrate  
+            Regístrate
           </Link>
         </p>
       </section>
     </section>
   );
-}
+};
 
 const mapDispatchToProps = {
-  loginRequest, 
-}
+  loginRequest,
+};
 
-export default connect(null,mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);

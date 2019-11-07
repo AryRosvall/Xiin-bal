@@ -280,13 +280,21 @@ body {
 }
 
 .profile__photo--frame{
-  border-radius: 100px;
+ 
+  width: 150px;
+  height: 150px;
   background-color:blue;
+  border-radius: 50%;
+  
 }
 
-.profile__photo img{
-  width: 200px;
-  height: 200px;
+.profile__photo{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border: 5px solid rgb(219, 219, 219);
 }
 
 .profile__title{
@@ -303,6 +311,7 @@ body {
 
 .profile__data{
   grid-area: data;
+  margin: 30px 0 0 300px;
 
 }
 
