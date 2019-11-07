@@ -1,13 +1,15 @@
 import React from 'react';
 import '../assets/styles/components/placecard.scss';
+import { Link } from 'react-router-dom';
 //import Photo from '../assets/static/google_place_photo.jpeg';
 
 const PlaceCard = (props) => {
 
   const { id, name, type, priceRange, address, schedule, rating, votes, image } = props;
-  console.log(image);
+
   return (
     <>
+      <Link to={`/placeDetail/${id}`}>
       <div id={id} className='place__card'>
         <div className='place__card--carousel'>
           <img src={image} alt='' className='place__card--img' />
@@ -33,8 +35,10 @@ const PlaceCard = (props) => {
           <button type='button' className='place__card--save'>Guardar</button>
         </div>
       </div>
+      </Link>
     </>
   );
 };
+
 
 export default PlaceCard;

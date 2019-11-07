@@ -12,3 +12,8 @@ export const logoutRequest = (payload) => ({
     type: 'LOGOUT_REQUEST',
     payload,
 });
+
+export const placeDetailRequest = (payload) => ({
+    type: 'PLACEDETAIL_REQUEST',
+    payload,
+});
