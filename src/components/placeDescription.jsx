@@ -1,37 +1,54 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import '../assets/styles/components/placeDescription.scss';
 import websiteIcon from '../assets/static/website.png';
 import phoneIcon from '../assets/static/phone.png';
+import { getPlace } from '../actions';
 
 
+const PlaceDescription = (props) => {
+    const { id, name, type, priceRange, address, schedule, description, phone, website } = props;
+    //const hasLooking = Object.keys(props.lookingPlace).length > 0;
+    
+ 
 
-const PlaceDescription = ({ props }) => {
+  console.log(props, "props de descripción")
+
     return (
         <section className="placeDetail__description">
-            <h1>Mini Loft Monumento a la Revolucion</h1>
-            <h2>Pastelería </h2>
-            <h2>$$</h2>
-            <h3>Olivar de los Padres, Mexico City</h3>
-            <h2>Horario</h2>
-            <div className="placeDetail__schedule">
-                Mon–Sat 9:00 AM–8:00 PM
+            <h1>{name}</h1>
+            <h2>{type}</h2>
+            <h2>{priceRange}</h2>
+            <h3>Dirección</h3>
+            <div>{address}</div>
+            <h3>Descripción</h3>
+            <div className="">
+            {description}
           </div>
-            <div className="placeDetail__schedule">
-                Sun 9:00 AM–4:00 PM
-          </div>
-            <h2>Datos de Contacto</h2>
+            <h3>Horario</h3>
+            {
+                 schedule.map((item, index) =>  
+                 <div className="placeDetail__schedule" id={index}>
+                 {item}
+                </div>
+                )
+            }
+            <h3>Datos de Contacto</h3>
             <div className="placeDetail__contact">
                 <span className="placeDetail__contact--icon">
                     <img src={phoneIcon} alt="" />
                 </span>
-                <span className="placeDetail__contact--data">5544332211</span>
+                <span className="placeDetail__contact--data">{phone}</span>
                 <span className="placeDetail__contact--icon">
                     <img src={websiteIcon} alt="" />
                 </span>
-                <span className="placeDetail__contact--data">aaaaaaaa@aaaaaaaa.com</span>
+                <span className="placeDetail__contact--data">{website}</span>
             </div>
         </section>
     );
 };
 
-export default PlaceDescription;
+
+  
+  export default connect(null, null)(PlaceDescription);
+  

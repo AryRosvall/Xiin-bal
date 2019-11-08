@@ -13,7 +13,7 @@ export const logoutRequest = (payload) => ({
     payload,
 });
 
-export const placeDetailRequest = (payload) => ({
-    type: 'PLACEDETAIL_REQUEST',
+export const getPlace = (payload) => ({
+    type: 'GETPLACE_REQUEST',
     payload,
 });

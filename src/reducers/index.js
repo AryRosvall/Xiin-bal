@@ -15,10 +15,10 @@ const reducer = (state, action) => {
                 ...state,
                 user: action.payload,
             };
-            case 'PLACEDETAIL_REQUEST':
+            case 'GETPLACE_REQUEST':
                 return {
                     ...state,
-                    user: action.payload,
+                    lookingPlace: state.places.find((item) => item.id.toString() === action.payload.toString())
                 };
         default:
             return state;

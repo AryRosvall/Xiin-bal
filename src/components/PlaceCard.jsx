@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import '../assets/styles/components/placecard.scss';
 import { Link } from 'react-router-dom';
 //import Photo from '../assets/static/google_place_photo.jpeg';
@@ -6,7 +7,7 @@ import { Link } from 'react-router-dom';
 const PlaceCard = (props) => {
 
   const { id, name, type, priceRange, address, schedule, rating, votes, image } = props;
-
+console.log("props de place card", props)
   return (
     <>
       <Link to={`/placeDetail/${id}`}>
@@ -41,4 +42,4 @@ const PlaceCard = (props) => {
 };
 
 
-export default PlaceCard;
+export default connect(null, null)(PlaceCard);
