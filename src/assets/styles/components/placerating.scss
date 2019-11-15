@@ -44,15 +44,30 @@
 }
 
 .placeDetail__map{
-  width: 100%;
+  
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
+
 }
 
+
+.placeDetail__map--container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  
+}
+
+.placeDetail__miniMap {
+  height: 250px;
+  
+}
 
 
 .map__directions{
   margin-top: 10px;
+  
 }
 

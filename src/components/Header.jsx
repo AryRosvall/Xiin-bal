@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import gravatar from '../utils/gravatar';
 import '../assets/styles/components/header.scss';
-import logo from '../assets/static/user-icon.png';
+/* import logo from '../assets/static/user-icon.png'; */
 import userIcon from '../assets/static/user-icon.png';
 import { logoutRequest } from '../actions/index';
 
@@ -15,11 +15,11 @@ const Header = (props) => {
   const handleLogout = () => {
     props.logoutRequest({});
   };
-
+  /* <img className='header__img' src='' alt='Xíinbal' /> */
   return (
     <header className='header'>
       <Link to='/'>
-        <img className='header__img' src='' alt='Xíinbal' />
+        Xíinbal
       </Link>
       <div className='header__search'>
         <div className='header__search--input'>

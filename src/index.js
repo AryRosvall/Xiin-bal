@@ -23,8 +23,9 @@ const InitialState = {
       'description': 'Vestibulum ac est lacinia nisi venenatis tristique',
       'location': { lat: 19.4417749, long: -99.2009822 },
       'phone': '5544332211',
-      'website': 'chinillos@ohsi.com'
-    
+      'website': 'chinillos@ohsi.com',
+      'favorite': false,
+
     },
     {
       'id': 2,
@@ -39,7 +40,9 @@ const InitialState = {
       'image': 'http://dummyimage.com/800x600.png/99118E/ffffff',
       'description': 'Vestibulum ac est lacinia nisi venenatis tristique',
       'location': { lat: 19.4417749, long: -99.2009822 },
-    
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
+      'favorite': false,
     },
     {
       'id': 3,
@@ -54,7 +57,12 @@ const InitialState = {
       'image': 'http://dummyimage.com/800x600.png/99118E/ffffff',
       'description': 'Vestibulum ac est lacinia nisi venenatis tristique',
       'location': { lat: 19.4417749, long: -99.2009822 },
-    
+      tags: [
+        'Comida',
+        'Nocturna',
+      ],
+      'favorite': false,
+
     },
     {
       'id': 4,
@@ -69,7 +77,13 @@ const InitialState = {
       'image': 'http://dummyimage.com/800x600.png/99118E/ffffff',
       'description': 'Vestibulum ac est lacinia nisi venenatis tristique',
       'location': { lat: 19.4417749, long: -99.2009822 },
-    
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
+      tags: [
+        'Comida',
+        'Nocturna',
+      ],
+      'favorite': false,
     },
     {
       'id': 5,
@@ -84,6 +98,13 @@ const InitialState = {
       'image': 'http://dummyimage.com/800x600.png/99118E/ffffff',
       'description': 'Vestibulum ac est lacinia nisi venenatis tristique',
       'location': { lat: 19.4417749, long: -99.5009822 },
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
+      tags: [
+        'Comida',
+        'Nocturna',
+      ],
+      'favorite': false,
     },
     {
       'id': 6,
@@ -98,16 +119,23 @@ const InitialState = {
       'image': 'http://dummyimage.com/800x600.png/99118E/ffffff',
       'description': 'Vestibulum ac est lacinia nisi venenatis tristique',
       'location': { lat: 19.4417749, long: -99.8809822 },
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
+      tags: [
+        'Comida',
+        'Nocturna',
+      ],
+      'favorite': false,
     },
     {
       id: 'd2a24a062-d256-41bb-b1b2-9d915af6b75e',
       name: 'Notti bianche, Le (White Nights)',
       type: 'Fonda',
-      priceRange: 1,
+      priceRange: '$$$',
       description:
         'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
       address: 'En el oxxo del moral, Iztapalapa',
-      rating: 9.0, 
+      rating: 9.0,
       votes: 50,
       schedule: [
         'Opens 24/7',
@@ -121,20 +149,23 @@ const InitialState = {
         image5: 'http://dummyimage.com/800x600.png/99118E/ffffff',
       },
       'location': { lat: 19.4417749, long: -99.5009822 },
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
       tags: [
         'Comida',
         'Nocturna',
-      ]
+      ],
+      'favorite': false,
     },
     {
       id: 'd2a4a062-d2526-41bb-b1b2-9d915af6b75e',
       name: 'Notti bianche, Le (White Nights)',
       type: 'Antro',
-      priceRange: 3,
+      priceRange: '$$',
       description:
         'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
       address: 'habitasse platea dictumst. Etiam f',
-      rating: 7.0, 
+      rating: 7.0,
       votes: 500,
       schedule: [
         'Jueves 22:00 a 3:00 hrs',
@@ -150,23 +181,26 @@ const InitialState = {
         image5: 'http://dummyimage.com/800x600.png/99118E/ffffff',
       },
       'location': { lat: 19.4417749, long: -99.5009822 },
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
       tags: [
         'Comida',
         'Nocturna',
-      ]
+      ],
+      'favorite': false,
     },
     {
       id: 'd2a4a062-d256-41bb-b1b22-9d915af6b75e',
       name: 'Notti bianche, Le (White Nights)',
       type: 'Fonda',
-      priceRange: 1,
+      priceRange: '$$$$',
       description:
         'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
       address: 'En el oxxo del moral, Iztapalapa',
-      rating: 9.0, 
+      rating: 9.0,
       votes: 50,
       schedule: [
-        'Opens 24/7'
+        'Opens 24/7',
       ],
       mainImage: 'http://dummyimage.com/800x600.png/99118E/ffffff',
       catalogImages: {
@@ -177,24 +211,29 @@ const InitialState = {
         image5: 'http://dummyimage.com/800x600.png/99118E/ffffff',
       },
       'location': { lat: 19.4417749, long: -99.5009822 },
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
       tags: [
         'Comida',
         'Nocturna',
-      ]
+      ],
+      'favorite': false,
     },
     {
       id: 'd2a4a062-d256-41bb-b1b2-9d915af6b75e2',
       name: 'Notti bianche, Le (White Nights)',
       type: 'Fonda',
-      priceRange: 1,
+      priceRange: '$',
       description:
         'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
       address: 'En el oxxo del moral, Iztapalapa',
-      rating: 9.0, 
+      rating: 9.0,
       votes: 50,
       schedule: [
-        'Opens 24/7'
+        'Opens 24/7',
       ],
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
       mainImage: 'http://dummyimage.com/800x600.png/99118E/ffffff',
       catalogImages: {
         image1: 'http://dummyimage.com/800x600.png/99118E/ffffff',
@@ -203,25 +242,28 @@ const InitialState = {
         image4: 'http://dummyimage.com/800x600.png/99118E/ffffff',
         image5: 'http://dummyimage.com/800x600.png/99118E/ffffff',
       },
-      'location': { lat: 19.4417749, long: -99.5009822 },
+      'location': { lat: 19.4267261, long: -99.1718706 },
       tags: [
         'Comida',
         'Nocturna',
-      ]
+      ],
+      'favorite': false,
     },
     {
       id: 'd2a4a062-d256-41bb-b1b2-9d915af6b75e3',
       name: 'Notti bianche, Le (White Nights)',
       type: 'Fonda',
-      priceRange: 1,
+      priceRange: '$$$$$',
       description:
         'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
       address: 'En el oxxo del moral, Iztapalapa',
-      rating: 9.0, 
+      rating: 9.0,
       votes: 50,
       schedule: [
-        'Opens 24/7'
+        'Opens 24/7',
       ],
+      'phone': '5544332211',
+      'website': 'chinillos@olala.com',
       mainImage: 'http://dummyimage.com/800x600.png/99118E/ffffff',
       catalogImages: {
         image1: 'http://dummyimage.com/800x600.png/99118E/ffffff',
@@ -230,16 +272,17 @@ const InitialState = {
         image4: 'http://dummyimage.com/800x600.png/99118E/ffffff',
         image5: 'http://dummyimage.com/800x600.png/99118E/ffffff',
       },
-      'location': { lat: 19.4417749, long: -99.5009822 },
+      'location': { lat: 19.4267261, long: -99.1718706 },
       tags: [
         'Comida',
         'Nocturna',
-      ]
+      ],
+      'favorite': false,
     },
   ],
 };
 
-const Store = createStore(reducer, InitialState);
+const Store = createStore(reducer, InitialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={Store}>

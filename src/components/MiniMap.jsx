@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-import '../assets/styles/components/map.scss';
+import '../assets/styles/components/placerating.scss';
 
-class MapContainer extends Component {
+class MiniMap extends Component {
 
   // eslint-disable-next-line react/state-in-constructor
   state = {
@@ -21,26 +21,22 @@ class MapContainer extends Component {
   render() {
 
     const { activeMarker, showingInfoWindow, selectedPlace } = this.state;
-    const { places, google } = this.props;
+    const { location, name, id, google } = this.props;
     console.log(this.props);
-
     return (
-      <div id='map' className='Main__map'>
+      <div id='map' className='placeDetail__miniMap'>
         <Map
           google={google}
-          zoom={5}
-          initialCenter={{ lat: 19.5943885, lng: -97.9526044 }}
+          zoom={15}
+          initialCenter={{ lat: location.lat, lng: location.long }}
         >
-          {
-            places.map((place) => (
-              <Marker
-                onClick={this.onMarkerClick}
-                position={{ lat: place.location.lat, lng: place.location.long }}
-                name={place.name}
-                key={place.id}
-              />
-            ))
-          }
+          <Marker
+            onClick={this.onMarkerClick}
+            position={{ lat: location.lat, lng: location.long }}
+            name={name}
+            key={id}
+          />
+
           <InfoWindow
             marker={activeMarker}
             visible={showingInfoWindow}
@@ -50,19 +46,14 @@ class MapContainer extends Component {
             </div>
           </InfoWindow>
         </Map>
+
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    places: state.places,
-  };
-};
-
 const WrappedContainer = GoogleApiWrapper({
   apiKey: 'AIzaSyCmjvkXB_DMnBUNwxQztLMStyQmA_szbNw',
-})(MapContainer);
+})(MiniMap);
 
-export default connect(mapStateToProps, null)(WrappedContainer);
+export default connect(null, null)(WrappedContainer);

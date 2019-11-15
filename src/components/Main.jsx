@@ -3,11 +3,11 @@ import '../assets/styles/components/main.scss';
 
 const Main = ({ children }) => {
 
-    return(
-        <section className="main">
-            {children}
-        </section>
-    ); 
+  return (
+    <section className='main'>
+      {children}
+    </section>
+  );
 };
 
-export default Main; 
+export default Main;

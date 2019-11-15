@@ -5,7 +5,7 @@ import Main from '../components/Main';
 import Places from '../components/Places';
 import PlaceCard from '../components/PlaceCard';
 import MapContainer from '../components/MapContainer';
-import '../assets/styles/App.scss';
+import '../assets/styles/app.scss';
 
 const Home = ({ places }) => {
   return (
@@ -14,7 +14,7 @@ const Home = ({ places }) => {
       <Main>
         <Places>
           {
-            places.map((item) => <PlaceCard key={item.id} {...item} />)
+            places.map((item, index) => <PlaceCard key={item.id} index={index} {...item} />)
           }
         </Places>
         <MapContainer />
