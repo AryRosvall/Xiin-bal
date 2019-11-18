@@ -1,0 +1,30 @@
+@import '../vars.scss';
+@import '../media.scss';
+
+.filters {
+    background-color: $filters-color;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .filters__btn {
+    font-size: 14px;
+    font-family: $font-family;
+    color: $secondaryColor;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: relative;
+    text-align: center;
+    width: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $btn-color;
+    background-color: $btn-color;
+    border-radius: $btnRadius;
+    text-decoration: none;
+    margin: 0 2px;
+  }
