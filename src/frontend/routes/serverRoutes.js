@@ -5,7 +5,7 @@ import NotFound from '../containers/NotFound';
 import PlaceDetail from '../containers/PlaceDetail';
 import Profile from '../containers/Profile';
 
-const serverRoutes = (isLogged) => (
+const serverRoutes = isLogged => (
   [
     {
       path: '/',

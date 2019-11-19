@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import '../assets/styles/components/placeDescription.scss';
 import websiteIcon from '../assets/static/website.png';
 import phoneIcon from '../assets/static/phone.png';
+import { convertPriceRange } from '../utils/helpers';
 
 const PlaceDescription = (props) => {
   const { name, type, priceRange, address, schedule, description, phone, website } = props;
@@ -10,8 +11,13 @@ const PlaceDescription = (props) => {
   return (
     <section className='placeDetail__description'>
       <h1>{name}</h1>
-      <h2>{type}</h2>
-      <h2>{priceRange}</h2>
+      <div>
+        <h2>{type}</h2>
+        {' '}
+          |
+        {' '}
+        <h2>{convertPriceRange(priceRange)}</h2>
+      </div>
       <h3>Dirección</h3>
       <div>{address}</div>
       <h3>Descripción</h3>

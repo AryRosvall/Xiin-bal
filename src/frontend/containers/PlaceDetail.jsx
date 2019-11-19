@@ -14,7 +14,7 @@ const PlaceDetail = (props) => {
 
   const { lookingPlace, match } = props;
   const { id } = match.params;
-  const { rating, votes, location, name, type, priceRange, address, schedule, description, phone, website } = lookingPlace;
+  const { rating, votes, location, name, type, priceRange, address, schedule, description, phone, website, catalogImages } = lookingPlace;
 
   useEffect(() => {
     props.getPlace(id);
@@ -25,7 +25,7 @@ const PlaceDetail = (props) => {
   return isLookingPlace ? (
     <>
       <Filters />
-      <PlaceCollage />
+      <PlaceCollage catalogImages={catalogImages} />
       <Main>
         <PlaceDescription
           id={id}

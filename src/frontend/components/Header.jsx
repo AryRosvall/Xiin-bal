@@ -35,7 +35,7 @@ const Header = (props) => {
           <button type='button' className='header__search--btn'>Buscar</button>
         </div>
       </div>
-      <section className='header__search--categories'>
+      {/*   <section className='header__search--categories'>
         <button type='button' className='header__search--categories_btn'>Favoritos</button>
         <button type='button' className='header__search--categories_btn'>Tendencias</button>
         <button type='button' className='header__search--categories_btn'>Comida</button>
@@ -43,7 +43,7 @@ const Header = (props) => {
         <button type='button' className='header__search--categories_btn'>Nocturna</button>
         <button type='button' className='header__search--categories_btn'>Diversión</button>
         <button type='button' className='header__search--categories_btn'>Compras</button>
-      </section>
+      </section> */}
       <div className='header__menu'>
         <div className='header__menu--profile'>
           {
@@ -55,8 +55,13 @@ const Header = (props) => {
         </div>
         <ul>
           {
-            hasUser ?
-              <li><a href='/'>{user.name}</a></li> :
+            hasUser ? (
+              <li>
+                <Link to='/profile'>
+                  {user.name}
+                </Link>
+              </li>
+            ) :
               null
           }
           {

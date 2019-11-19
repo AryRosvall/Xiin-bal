@@ -1,25 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getFavorites } from '../actions/index';
+import { getFavorites, getPlaces } from '../actions/index';
+import { getCookie } from '../utils/helpers';
 import '../assets/styles/components/filters.scss';
 
 const Filters = (props) => {
-
-  function getCookie(cname) {
-    const name = `${cname}=`;
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const ca = decodedCookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) === ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) === 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return '';
-  }
 
   const handleViewFavorites = () => {
     const userId = getCookie('id');
@@ -27,20 +12,27 @@ const Filters = (props) => {
     props.getFavorites(userId, token);
   };
 
+  const handleViewFilter = (filter) => {
+    props.getPlaces(filter);
+  };
+
   return (
     <section className='filters'>
-      <button type='button' className='filters__btn'>Precio</button>
-      <button type='button' className='filters__btn'>Abierto ahora</button>
-      <button type='button' className='filters__btn'>Especiales</button>
-      <button type='button' className='filters__btn'>No he estado</button>
-      <button type='button' className='filters__btn'>Guardado</button>
-      <button type='button' className='filters__btn' onClick={handleViewFavorites}>Favoritos</button>
+      <button type='submit' className='filters__btn' onClick={() => handleViewFilter('Comida')}>Comida</button>
+      <button type='button' className='filters__btn' onClick={() => handleViewFilter('Café')}>Café</button>
+      <button type='button' className='filters__btn' onClick={() => handleViewFilter('Nocturna')}>Nocturna</button>
+      <button type='button' className='filters__btn' onClick={() => handleViewFilter('Diversión')}>Diversión</button>
+      <button type='button' className='filters__btn' onClick={() => handleViewFilter('Compras')}>Compras</button>
+      <button type='button' className='filters__btn' onClick={() => handleViewFilter('Precio')}>Precio</button>
+      <button type='submit' className='filters__btn' onClick={handleViewFavorites}>Favoritos</button>
+      <button type='submit' className='filters__btn' onClick={() => handleViewFilter('All')}>Todos</button>
     </section>
   );
 };
 
 const mapDispatchToProps = {
   getFavorites,
+  getPlaces,
 };
 
 export default connect(null, mapDispatchToProps)(Filters);

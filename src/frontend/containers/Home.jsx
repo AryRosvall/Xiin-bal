@@ -27,7 +27,7 @@ const Home = ({ places }) => {
                 schedule={item.schedule}
                 rating={item.rating}
                 votes={item.votes}
-                image={item.image}
+                image={item.mainImage}
               />
             ))
           }
@@ -40,7 +40,7 @@ const Home = ({ places }) => {
 
 const mapStateToProps = (state) => {
   return {
-    places: state.places,
+    places: state.filteredPlaces,
   };
 };
 

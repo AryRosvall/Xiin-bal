@@ -3,26 +3,11 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { saveFavorite, deleteFavorite } from '../actions';
 import '../assets/styles/components/placecard.scss';
+import { convertPriceRange, getCookie } from '../utils/helpers';
 
 const PlaceCard = (props) => {
 
   const { id, name, type, priceRange, address, schedule, rating, votes, image } = props;
-
-  function getCookie(cname) {
-    const name = `${cname}=`;
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const ca = decodedCookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) === ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) === 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return '';
-  }
 
   const handleSetFavorite = () => {
     const userId = getCookie('id');
@@ -46,10 +31,10 @@ const PlaceCard = (props) => {
           <h2>{name}</h2>
           <h3>
             {type}
-            {' '}
+            {'  '}
             |
             {' '}
-            {priceRange}
+            {convertPriceRange(priceRange)}
           </h3>
           <span>{address}</span>
           <div>{schedule}</div>

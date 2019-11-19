@@ -41,6 +41,7 @@ const main = async (req, res, next) => {
         user,
         lookingPlace: {},
         places: placesList,
+        filteredPlaces: placesList,
       };
 
     } catch (error) {
@@ -48,8 +49,9 @@ const main = async (req, res, next) => {
         user: {},
         lookingPlace: {},
         places: {},
+        filteredPlaces: {},
       };
-      console.log(error);
+
     }
 
     const isLogged = (initialState.user.id !== undefined);

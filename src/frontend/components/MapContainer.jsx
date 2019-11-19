@@ -31,7 +31,7 @@ class MapContainer extends Component {
           initialCenter={{ lat: 19.5943885, lng: -97.9526044 }}
         >
           {
-            places.map((place) => (
+            places.map(place => (
               <Marker
                 onClick={this.onMarkerClick}
                 position={{ lat: place.location.lat, lng: place.location.long }}
