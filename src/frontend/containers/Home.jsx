@@ -9,8 +9,6 @@ import '../assets/styles/Base.scss';
 
 const Home = ({ places }) => {
 
-  const { id, name, type, priceRange, address, schedule, rating, votes, image } = places;
-
   return (
     <>
       <Filters />
@@ -21,15 +19,15 @@ const Home = ({ places }) => {
               <PlaceCard
                 key={item.id}
                 index={index}
-                id={id}
-                name={name}
-                type={type}
-                priceRange={priceRange}
-                address={address}
-                schedule={schedule}
-                rating={rating}
-                votes={votes}
-                image={image}
+                id={item.id}
+                name={item.name}
+                type={item.type}
+                priceRange={item.priceRange}
+                address={item.address}
+                schedule={item.schedule}
+                rating={item.rating}
+                votes={item.votes}
+                image={item.image}
               />
             ))
           }

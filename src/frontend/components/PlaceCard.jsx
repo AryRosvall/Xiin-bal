@@ -1,16 +1,33 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setFavorite, deleteFavorite } from '../actions';
+import { saveFavorite, deleteFavorite } from '../actions';
 import '../assets/styles/components/placecard.scss';
-//import Photo from '../assets/static/google_place_photo.jpeg';
 
 const PlaceCard = (props) => {
 
-  const { id, name, type, priceRange, address, schedule, rating, votes, image, index } = props;
+  const { id, name, type, priceRange, address, schedule, rating, votes, image } = props;
+
+  function getCookie(cname) {
+    const name = `${cname}=`;
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return '';
+  }
 
   const handleSetFavorite = () => {
-    props.setFavorite({ index });
+    const userId = getCookie('id');
+    const token = getCookie('token');
+    props.saveFavorite({ userId, id, token });
   };
 
   /* const handleDeleteFavorite = (itemId) => {
@@ -52,7 +69,7 @@ const PlaceCard = (props) => {
 };
 
 const mapDispatchToProps = {
-  setFavorite,
+  saveFavorite,
   deleteFavorite,
 };
 

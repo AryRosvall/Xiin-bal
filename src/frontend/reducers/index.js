@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 const reducer = (state, action) => {
   switch (action.type) {
     case 'LOGIN_REQUEST':
@@ -33,12 +34,18 @@ const reducer = (state, action) => {
         ...state,
         myList: state.myList.filter((items) => items.id !== action.payload),
       };
-    case 'VIEW_FAVORITES':
+    case 'VIEW_FAVORITES': {
       return {
         ...state,
-        places: state.places.filter((item) => item.favorite === true),
+        places: state.places.filter((item) => {
+          const semiPlaces = [];
+          action.payload.data.map((place) => {
+            if (place.placeId === item.id) semiPlaces.push(place.placeId);
+          });
+          return semiPlaces[0] === item.id;
+        }),
       };
-
+    }
     default:
       return state;
   }

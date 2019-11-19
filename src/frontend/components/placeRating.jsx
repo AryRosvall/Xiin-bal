@@ -8,7 +8,6 @@ import sadIcon from '../assets/static/sad.png';
 const PlaceRating = (props) => {
 
   const { rating, votes, location, name, id } = props;
-  console.log(location);
 
   const locationURL = `https://www.google.com/maps/search/?api=1&query=${location.lat},${location.long}`;
   return (

@@ -10,7 +10,7 @@ const render = (html, preloadedState) => {
     <!DOCTYPE html>
   <html lang="en">
   <head>
-      <title>myflix</title>
+      <title>Xíinbal</title>
       <link rel="stylesheet" href="${isDev ? 'assets/app.css' : files['main.css']}" type="text/css"></link>
       </head>
       <body>

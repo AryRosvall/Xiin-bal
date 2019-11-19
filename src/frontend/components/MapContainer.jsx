@@ -22,7 +22,6 @@ class MapContainer extends Component {
 
     const { activeMarker, showingInfoWindow, selectedPlace } = this.state;
     const { places, google } = this.props;
-    console.log(this.props);
 
     return (
       <div id='map' className='Main__map'>

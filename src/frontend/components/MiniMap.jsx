@@ -22,7 +22,7 @@ class MiniMap extends Component {
 
     const { activeMarker, showingInfoWindow, selectedPlace } = this.state;
     const { location, name, id, google } = this.props;
-    console.log(this.props);
+
     return (
       <div id='map' className='placeDetail__miniMap'>
         <Map
