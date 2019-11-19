@@ -35,7 +35,7 @@ export const loginUser = ({ email, password }, redirectURL) => {
         document.cookie = `email=${data.email}`;
         document.cookie = `name=${data.name}`;
         document.cookie = `id=${data.id}`;
-        dispatch(registerRequest(data));
+        dispatch(loginRequest(data));
       })
       .then(() => { window.location.href = redirectURL; })
       .catch((err) => dispatch(setError(err)));
@@ -66,11 +66,18 @@ export const setFavorite = (payload) => ({
 });
 
 export const saveFavorite = (payload) => {
+  console.log(payload);
   return (dispatch) => {
-    axios.post('/user-places/', payload)
-      .then(({ data }) => console.log(data))
+    axios({
+      url: '/saveFavorites/',
+      method: 'post',
+      data: {
+        placeId: payload.id,
+        userId: payload.userId,
+        token: payload.token,
+      },
+    })
       .then(({ data }) => dispatch(setFavorite()))
-      .then(() => { window.location.href = redirectURL; })
       .catch((err) => dispatch(setError(err)));
   };
 };

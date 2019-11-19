@@ -113,6 +113,28 @@ app.post('/userFavorites/', async (req, res, next) => {
   }
 });
 
+app.post('/saveFavorites/', async (req, res, next) => {
+
+  const { body: data } = req;
+  console.log(data.userId, 'save favorite');
+  let places;
+  try {
+    await axios({
+      url: `${config.apiUrl}/api/user-places/`,
+      method: 'post',
+      headers: { Authorization: `Bearer ${data.token}` },
+      data: {
+        userId: data.userId,
+        placeId: data.placeId,
+      },
+    });
+
+    res.status(201).json();
+  } catch (error) {
+    next(error);
+  }
+});
+
 /* router.post('/',
   passport.authenticate('jwt', { session: false }),
   scopesValidationHandler(['create:user-places']),
