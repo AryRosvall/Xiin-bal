@@ -25,7 +25,7 @@ const Header = (props) => {
   return (
     <header className='header'>
       <Link to='/'>
-        Xíinbal
+        <span className='header__logo'>Xíinbal</span>
       </Link>
       <div className='header__search'>
         <div className='header__search--input'>

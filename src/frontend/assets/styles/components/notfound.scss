@@ -1,5 +1,4 @@
-@import '../vars.scss';
-@import '../media.scss';
+@import "../Base.scss";
 
 $font-color: white;
 $background-color: $BGNotFound fixed;
@@ -11,11 +10,10 @@ $all: 100%;
 }
 
 .notfound {
-
-    height: $all;
-    background: $background-color;
-    font-family: $font-family;
-    color: $font-color;
+  height: $all;
+  background: $background-color;
+  font-family: $font-family;
+  color: $font-color;
   @extend %flex-center;
   flex-flow: column wrap;
   align-content: center;

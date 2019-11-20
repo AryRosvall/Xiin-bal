@@ -1,10 +1,194 @@
-@media only screen and (max-width: 600px) {
-    .main__description--title {
-      font-size: 30px;
-    }
-  
-    .footer {
-      align-items: flex-start;
-      flex-direction: column;
-    }
+@media only screen and (max-width: 1127px) {
+  .main {
+    display: grid;
+    grid-template-columns: 100%;
+    height: auto;
+    width: 100%;
   }
+
+  .Main__map {
+    width: 0;
+    display: none;
+    visibility: hidden;
+  }
+
+  .filters__btn {
+    font-size: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #f4f8f8;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: relative;
+    text-align: center;
+    width: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dd8328;
+    background-color: #dd8328;
+    border-radius: 2px;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+
+  .header__search--input input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #fff;
+    border-radius: 8px 0 0 8px;
+    color: #484848;
+    text-overflow: ellipsis;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    height: 50px;
+    outline: none;
+    padding: 0px 20px;
+    width: 500px;
+    border-color: #fff;
+  }
+}
+
+@media only screen and (max-width: 851px) {
+  .header__search--input input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #fff;
+    border-radius: 8px 0 0 8px;
+    color: #484848;
+    text-overflow: ellipsis;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    height: 50px;
+    outline: none;
+    padding: 0px 20px;
+    width: 200px;
+    border-color: #fff;
+  }
+
+  .place__card--carousel {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: $btnRadius;
+    overflow: hidden;
+    margin: 15px 0 0 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .place__card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    margin: 20px;
+    padding: 10px;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .place__card--carousel {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: $btnRadius;
+    overflow: hidden;
+    margin: 15px 0 0 10px;
+  }
+
+  .place__card--details {
+    margin-left: 20px;
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+
+  .place__card--img {
+    width: 300px;
+    height: 200px;
+    display: flex;
+  }
+
+  .header__search--input input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #fff;
+    border-radius: 8px 0 0 8px;
+    color: #484848;
+    text-overflow: ellipsis;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    height: 50px;
+    outline: none;
+    padding: 0px 20px;
+    width: 100px;
+    border-color: #fff;
+  }
+}
+
+/* Portrait and Landscape */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+  .place__card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    margin: 20px;
+    padding: 10px;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .place__card--carousel {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: $btnRadius;
+    overflow: hidden;
+    margin: 15px 0 0 10px;
+  }
+
+  .place__card--details {
+    margin-left: 20px;
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+
+  .place__card--img {
+    width: 300px;
+    height: 200px;
+    display: flex;
+  }
+
+  .header__search--input input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #fff;
+    border-radius: 8px 0 0 8px;
+    color: #484848;
+    text-overflow: ellipsis;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    height: 50px;
+    outline: none;
+    padding: 0px 20px;
+    width: 100px;
+    border-color: #fff;
+  }
+}

@@ -29,13 +29,13 @@ const PlaceCard = (props) => {
         </Link>
         <div className='place__card--details'>
           <h2>{name}</h2>
-          <h3>
+          <span>
             {type}
             {'  '}
             |
             {' '}
             {convertPriceRange(priceRange)}
-          </h3>
+          </span>
           <span>{address}</span>
           <div>{schedule}</div>
           <div className='place__card--rating'>

@@ -19,7 +19,7 @@ const reducer = (state, action) => {
     case 'GETPLACE_REQUEST':
       return {
         ...state,
-        lookingPlace: state.places.find(item => item.id.toString() === action.payload.toString()),
+        lookingPlace: state.places.find((item) => item.id.toString() === action.payload.toString()),
       };
     case 'SET_FAVORITE': {
 
@@ -33,7 +33,7 @@ const reducer = (state, action) => {
     case 'DELETE_FAVORITE':
       return {
         ...state,
-        myList: state.myList.filter(items => items.id !== action.payload),
+        myList: state.myList.filter((items) => items.id !== action.payload),
       };
     case 'VIEW_FAVORITES': {
       return {
@@ -50,7 +50,7 @@ const reducer = (state, action) => {
     case 'GETPLACES_REQUEST': {
       return {
         ...state,
-        filteredPlaces: action.payload === 'All' ? state.places : state.places.filter(item => item.tags.some(tag => tag.includes(action.payload))),
+        filteredPlaces: action.payload === 'All' ? state.places : state.places.filter((item) => item.tags.some((tag) => tag.includes(action.payload))),
       };
     }
     default:

@@ -1,42 +1,37 @@
-@import '../vars.scss';
-@import '../media.scss';
-
+@import "../Base.scss";
 
 .placeDetail__description {
-    background-color:#FFFFFF;
-    margin: 30px 0 50px 300px;
-
-
-  }
-  
-  .placeDetail__description h1{
-    font-size: 40px;
-    font-weight: normal; 
-  }
-  
-
-.placeDetail__schedule{
-    background-color: #F7F7FA;
-    border-radius: 2px;
-    padding: 10px;
-    border: solid 1px white;
-    width: 300px;
+  background-color: #ffffff;
+  margin: 30px 0 50px 300px;
 }
-  
-  .placeDetail__contact{
-    display: grid;
-    grid-template-columns: 10% 90%;
-  }
-  
-  .placeDetail__contact--icon{
-    margin:5px 0;
-  }
-  
-  .placeDetail__contact--icon img{
-    width: 20px;
-    height: 20px;
-  }
-  
-  .placeDetail__contact--data{
-    margin:5px 0;
-  }
+
+.placeDetail__description h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.placeDetail__schedule {
+  background-color: #f7f7fa;
+  border-radius: 2px;
+  padding: 10px;
+  border: solid 1px white;
+  width: 300px;
+}
+
+.placeDetail__contact {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.placeDetail__contact--icon {
+  margin: 5px 0;
+}
+
+.placeDetail__contact--icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.placeDetail__contact--data {
+  margin: 5px 0;
+}

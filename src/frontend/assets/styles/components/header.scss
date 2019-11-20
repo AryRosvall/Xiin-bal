@@ -1,21 +1,23 @@
-@import '../vars.scss';
-@import '../media.scss';
-
+@import "../Base.scss";
 
 .header {
   align-items: center;
   background: $header-color;
-  color:$font-color;
+  color: $fontcolor1;
   display: flex;
-  height: 100px;
+  height: 80px;
   justify-content: space-between;
   top: 0px;
   width: 100%;
 }
 
-.header__img {
+.header__logo {
   margin-left: 30px;
   width: 200px;
+  font-size: x-large;
+  color: $fontcolor1;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 .header__menu {
@@ -32,7 +34,8 @@
   text-align: right;
 }
 
-.header__menu:hover ul, ul:hover {
+.header__menu:hover ul,
+ul:hover {
   display: block;
 }
 
@@ -41,12 +44,12 @@
 }
 
 .header__menu li a {
-  color: $secondaryColor;
+  color: $fontcolor1;
   text-decoration: none;
 }
 
 .header__menu li a:hover {
-  color: $font-color;
+  color: $fontcolor1;
   text-decoration: underline;
 }
 
@@ -65,16 +68,16 @@
   position: relative;
   display: table;
   height: 48px;
-  background: #ffffff;
+  background: $color5;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
 }
 
 .header__search--input input {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid white;
+  background-color: $color6;
+  border: 2px solid $color5;
   border-radius: 8px 0 0 8px;
-  color: rgb(72, 72, 72);
+  color: $fontcolor2;
   text-overflow: ellipsis;
   font-family: $font-family;
   font-weight: 800;
@@ -82,15 +85,15 @@
   height: 50px;
   outline: none;
   padding: 0px 20px;
-  width: 100%;
-  border-color: rgb(255, 255, 255);
+  width: 500px;
+  border-color: $color5;
 }
 
 .header__search--btnContainer {
   height: 100%;
   vertical-align: middle;
   display: table-cell;
-  border: 1px solid #ffffff;
+  border: 1px solid $color5;
   border-radius: 0 8px 8px 0;
   border-left: none;
   width: 72px;
@@ -121,12 +124,12 @@
   -moz-transition: box-shadow 0.2s ease, transform 0.25s ease;
   transition: box-shadow 0.2s ease, -ms-transform 0.25s ease, -webkit-transform 0.25s ease, transform 0.25s ease;
   border: none;
-  background:$btnSearch;
-  color: #FFFFFF; 
+  background: $btnSearch;
+  color: $color5;
 }
 
 ::placeholder {
-  color:$placeholderColor;
+  color: $fontcolor2;
 }
 
 .header__search--categories_btn {
