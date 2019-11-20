@@ -1,13 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import '../assets/styles/components/places.scss';
 
-const Places = ({ children }) => {
+const Places = (props) => {
+
+  const { mainView, children } = props;
 
   return (
     <section className='places'>
+      <h2>{mainView}</h2>
       {children}
     </section>
   );
 };
 
-export default Places;
+const mapStateToProps = (state) => {
+  return {
+    mainView: state.mainView,
+  };
+};
+
+export default connect(mapStateToProps, null)(Places);

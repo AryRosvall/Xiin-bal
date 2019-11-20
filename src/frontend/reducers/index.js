@@ -6,21 +6,35 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       };
-    case 'REGISTER_REQUEST':
-      return {
-        ...state,
-        user: action.payload,
-      };
     case 'LOGOUT_REQUEST':
       return {
         ...state,
         user: action.payload,
       };
+    case 'REGISTER_REQUEST':
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case 'GETPLACES_REQUEST': {
+      return {
+        ...state,
+        mainView: action.payload === 'All' ? 'Todos los lugares' : action.payload,
+        filteredPlaces: action.payload === 'All' ? state.places : state.places.filter(item => item.tags.some(tag => tag.includes(action.payload))),
+      };
+    }
     case 'GETPLACE_REQUEST':
       return {
         ...state,
-        lookingPlace: state.places.find((item) => item.id.toString() === action.payload.toString()),
+        lookingPlace: state.places.find(item => item.id.toString() === action.payload.toString()),
       };
+    case 'SEARCHPLACES_REQUEST': {
+      return {
+        ...state,
+        mainView: 'Encontrados: ',
+        filteredPlaces: state.places.filter(obj => Object.values(obj).some(val => (val ? val.toString().toLowerCase().includes(action.payload.toLowerCase()) : false))),
+      };
+    }
     case 'SET_FAVORITE': {
 
       const data = [...state.places],
@@ -33,11 +47,12 @@ const reducer = (state, action) => {
     case 'DELETE_FAVORITE':
       return {
         ...state,
-        myList: state.myList.filter((items) => items.id !== action.payload),
+        myList: state.myList.filter(items => items.id !== action.payload),
       };
     case 'VIEW_FAVORITES': {
       return {
         ...state,
+        mainView: 'Favoritos',
         filteredPlaces: state.places.filter((item) => {
           const semiPlaces = [];
           action.payload.data.map((place) => {
@@ -45,12 +60,6 @@ const reducer = (state, action) => {
           });
           return semiPlaces[0] === item.id;
         }),
-      };
-    }
-    case 'GETPLACES_REQUEST': {
-      return {
-        ...state,
-        filteredPlaces: action.payload === 'All' ? state.places : state.places.filter((item) => item.tags.some((tag) => tag.includes(action.payload))),
       };
     }
     default:

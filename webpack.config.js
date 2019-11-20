@@ -63,7 +63,9 @@ module.exports = {
         },
       },
       {
-        test: /\.(s*)css$/,
+        /*    test: /\.(s*)css$/, */
+        test: /(\.css|\.scss|\.sass)$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -72,13 +74,13 @@ module.exports = {
           'postcss-loader',
           {
             loader: 'sass-loader',
-            options: {
-              prependData: `
-              @import "${path.resolve(__dirname, 'src/frontend/assets/styles/vars.scss')}";
-              @import "${path.resolve(__dirname, 'src/frontend/assets/styles/media.scss')}";
-              @import "${path.resolve(__dirname, 'src/frontend/assets/styles/Base.scss')}";
-              `,
-            },
+            /*  options: {
+               prependData: `
+                   @import "${path.resolve(__dirname, 'src/frontend/assets/styles/vars.scss')}";
+                   @import "${path.resolve(__dirname, 'src/frontend/assets/styles/media.scss')}";
+                   @import "${path.resolve(__dirname, 'src/frontend/assets/styles/Base.scss')}";
+                   `,
+             }, */
           },
         ],
       },

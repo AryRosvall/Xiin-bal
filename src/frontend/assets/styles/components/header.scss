@@ -96,8 +96,8 @@ ul:hover {
   border: 1px solid $color5;
   border-radius: 0 8px 8px 0;
   border-left: none;
-  width: 72px;
-  padding: 6px 8px 6px 0;
+  width: 50px;
+  
 }
 
 .header__search--btn {
@@ -130,6 +130,11 @@ ul:hover {
 
 ::placeholder {
   color: $fontcolor2;
+}
+
+.header__search--btnIcon{
+  width: 30px;
+  margin: 10px 0 5px 0;
 }
 
 .header__search--categories_btn {

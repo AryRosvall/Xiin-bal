@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import gravatar from '../utils/gravatar';
 import '../assets/styles/components/header.scss';
 /* import logo from '../assets/static/user-icon.png'; */
 import userIcon from '../assets/static/user-icon.png';
-import { logoutRequest } from '../actions/index';
+import searchIcon from '../assets/static/search.png';
+import { logoutRequest, searchPlace } from '../actions/index';
 
 const Header = (props) => {
 
   const { user } = props;
+
+  const [searchQuery, setsearchQuery] = useState('');
 
   const hasUser = Object.keys(user).length > 0;
 
@@ -21,7 +24,11 @@ const Header = (props) => {
     props.logoutRequest({});
     window.location.href = '/login';
   };
-  /* <img className='header__img' src='' alt='Xíinbal' /> */
+
+  const handleSearch = (searchQuery) => {
+    props.searchPlace(searchQuery);
+  };
+
   return (
     <header className='header'>
       <Link to='/'>
@@ -29,10 +36,10 @@ const Header = (props) => {
       </Link>
       <div className='header__search'>
         <div className='header__search--input'>
-          <input type='text' className='input' placeholder='Buscar...' />
+          <input type='text' className='input' placeholder='Buscar...' onInput={e => setsearchQuery(e.target.value)} />
         </div>
         <div className='header__search--btnContainer'>
-          <button type='button' className='header__search--btn'>Buscar</button>
+          <img className='header__search--btnIcon' src={searchIcon} alt='' onClick={() => { handleSearch(searchQuery); }} />
         </div>
       </div>
       {/*   <section className='header__search--categories'>
@@ -93,6 +100,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   logoutRequest,
+  searchPlace,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
