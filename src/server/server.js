@@ -33,7 +33,7 @@ if (ENV === 'development') {
   console.log('Loading development environment');
   const compiler = webpack(webpackConfig);
   const serverConfig = {
-    contentBase: `http://localhost:${PORT}`,
+    contentBase: 'https://xiinbal.herokuapp.com/',
     port: PORT,
     publicPath: webpackConfig.output.publicPath,
     hot: true,
