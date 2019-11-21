@@ -1,5 +1,13 @@
 import axios from 'axios';
 
+export const setError = (payload) => {
+  console.log(payload);
+  return {
+    type: 'SET_ERROR_REQUEST',
+    payload,
+  };
+};
+
 export const registerRequest = payload => ({
   type: 'REGISTER_REQUEST',
   payload,
@@ -63,7 +71,7 @@ export const searchPlace = payload => ({
 });
 
 export const setFavorite = payload => ({
-  type: 'SET_FAVORITE',
+  type: 'SET_FAVORITE_REQUEST',
   payload,
 });
 
@@ -85,12 +93,12 @@ export const saveFavorite = (payload) => {
 };
 
 export const deleteFavorite = payload => ({
-  type: 'DELETE_FAVORITE',
+  type: 'DELETE_FAVORITE_REQUEST',
   payload,
 });
 
 export const viewFavorites = payload => ({
-  type: 'VIEW_FAVORITES',
+  type: 'VIEW_FAVORITES_REQUEST',
   payload,
 });
 

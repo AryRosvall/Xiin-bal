@@ -1,6 +1,12 @@
 /* eslint-disable array-callback-return */
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'SET_ERROR_REQUEST':
+      console.log('error', action.payload);
+      return {
+        ...state,
+        error: action.payload,
+      };
     case 'LOGIN_REQUEST':
       return {
         ...state,
@@ -35,7 +41,7 @@ const reducer = (state, action) => {
         filteredPlaces: state.places.filter(obj => Object.values(obj).some(val => (val ? val.toString().toLowerCase().includes(action.payload.toLowerCase()) : false))),
       };
     }
-    case 'SET_FAVORITE': {
+    case 'SET_FAVORITE_REQUEST': {
 
       const data = [...state.places],
         index = data.findIndex((place, index) => index === action.payload.index); //finding which index should get udpate
@@ -44,12 +50,12 @@ const reducer = (state, action) => {
         return { ...state, filteredPlaces: data };
       } return { ...state };
     }
-    case 'DELETE_FAVORITE':
+    case 'DELETE_FAVORITE_REQUEST':
       return {
         ...state,
         myList: state.myList.filter(items => items.id !== action.payload),
       };
-    case 'VIEW_FAVORITES': {
+    case 'VIEW_FAVORITES_REQUEST': {
       return {
         ...state,
         mainView: 'Favoritos',

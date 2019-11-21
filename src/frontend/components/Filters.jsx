@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { getFavorites, getPlaces } from '../actions/index';
 import { getCookie } from '../utils/helpers';
 import '../assets/styles/components/filters.scss';
@@ -10,10 +11,12 @@ const Filters = (props) => {
     const userId = getCookie('id');
     const token = getCookie('token');
     props.getFavorites(userId, token);
+    props.history.push('/');
   };
 
   const handleViewFilter = (filter) => {
     props.getPlaces(filter);
+    props.history.push('/');
   };
 
   return (
@@ -35,4 +38,4 @@ const mapDispatchToProps = {
   getPlaces,
 };
 
-export default connect(null, mapDispatchToProps)(Filters);
+export default withRouter(connect(null, mapDispatchToProps)(Filters));

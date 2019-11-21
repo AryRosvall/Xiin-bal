@@ -43,6 +43,7 @@ const main = async (req, res, next) => {
         places: placesList,
         filteredPlaces: placesList,
         mainView: 'Todos los lugares',
+        error: '',
       };
 
     } catch (error) {
@@ -52,6 +53,7 @@ const main = async (req, res, next) => {
         places: {},
         filteredPlaces: {},
         mainView: 'Todos los lugares',
+        error: '',
       };
 
     }
