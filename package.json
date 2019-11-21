@@ -9,6 +9,9 @@
     "start:prod": "node src/server/index.js",
     "start:dev": "nodemon src/server/index.js --exact babel-node"
   },
+   "engines": {
+    "node": "10.16.3"
+  },
   "repository": {
     "type": "git",
     "url": "xiinbal"
@@ -27,10 +30,11 @@
     "autoprefixer": "^9.7.0",
     "axios": "^0.19.0",
     "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-loader": "^8.0.6",
     "classnames": "^2.2.6",
+    "compression-webpack-plugin": "^3.0.0",
     "cookie-parser": "^1.4.4",
     "css-loader": "^3.2.0",
     "dotenv": "^8.2.0",
@@ -43,7 +47,6 @@
     "html-webpack-plugin": "^3.2.0",
     "ignore-styles": "^5.0.1",
     "immer": "^5.0.0",
-    "live-server": "^1.2.1",
     "md5": "^2.2.1",
     "mini-css-extract-plugin": "^0.8.0",
     "passport": "^0.4.0",
@@ -60,14 +63,13 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "sass": "^1.23.3",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.8.2",
     "webpack-hot-middleware": "^2.25.0",
-    "compression-webpack-plugin": "^3.0.0",
-    "terser-webpack-plugin": "^2.2.1",
-    "webpack-manifest-plugin": "^2.2.0",
-    "webpack": "^4.41.2"
+    "webpack-manifest-plugin": "^2.2.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
@@ -79,6 +81,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "json-server": "^0.15.1",
+    "live-server": "^1.2.1",
     "node-sass": "^4.13.0",
     "nodemon": "^1.19.4",
     "prettier": "^1.18.2",
