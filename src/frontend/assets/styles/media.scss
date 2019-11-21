@@ -12,7 +12,7 @@
     visibility: hidden;
   }
 
-  .filters__btn {
+/*   .filters__btn {
     font-size: 20px;
     font-family: "Nunito Sans", sans-serif;
     color: #f4f8f8;
@@ -31,7 +31,7 @@
     border-radius: 2px;
     text-decoration: none;
     margin: 0 5px;
-  }
+  } */
 
   .header__search--input input {
     background-color: rgba(255, 255, 255, 0.5);
@@ -48,6 +48,19 @@
     width: 500px;
     border-color: #fff;
   }
+
+   .placeDetail__rating {
+    grid-row: 1;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+     width:300px;
+    padding:10px;
+    margin: 50px 80px;
+    border-radius: 2px;
+  }
+
 }
 
 @media only screen and (max-width: 851px) {
@@ -67,6 +80,27 @@
     border-color: #fff;
   }
 
+    .filters__btn {
+  font-size: 14px;
+  font-family: $font-family;
+  color: $secondaryColor;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+  text-align: center;
+  width: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $btn-color;
+  background-color: $btn-color;
+  border-radius: $btnRadius;
+  text-decoration: none;
+  margin: 0 2px;
+}
+
   .place__card--carousel {
     width: 300px;
     height: 200px;
@@ -75,6 +109,18 @@
     border-radius: $btnRadius;
     overflow: hidden;
     margin: 15px 0 0 10px;
+  }
+
+   .placeDetail__rating {
+    grid-row: 1;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+     width:250px;
+    padding:10px;
+    margin: 50px 80px;
+    border-radius: 2px;
   }
 }
 
@@ -132,7 +178,33 @@
     padding: 0px 20px;
     width: 100px;
     border-color: #fff;
+}
+    .placeDetailMain {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+  .placeDetail__description {
+      background-color: #ffffff;
+      margin: 30px 0 10px 50px;
   }
+
+  .placeDetail__rating {
+    grid-row: 1;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+     width:400px;
+    padding:10px;
+    margin: 5px 80px;
+    border-radius: 2px;
+  }
+
+
 }
 
 /* Portrait and Landscape */

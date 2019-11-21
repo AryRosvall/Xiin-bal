@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Filters from '../components/Filters';
-import Main from '../components/Main';
+import PlaceDetailMain from '../components/PlaceDetailMain';
 import PlaceDescription from '../components/placeDescription';
 import PlaceRating from '../components/placeRating';
 import PlaceCollage from '../components/placeCollage';
@@ -26,7 +26,7 @@ const PlaceDetail = (props) => {
     <>
       <Filters />
       <PlaceCollage catalogImages={catalogImages} />
-      <Main>
+      <PlaceDetailMain>
         <PlaceDescription
           id={id}
           name={name}
@@ -39,7 +39,7 @@ const PlaceDetail = (props) => {
           website={website}
         />
         <PlaceRating id={id} votes={votes} rating={rating} location={location} name={name} />
-      </Main>
+      </PlaceDetailMain>
     </>
   ) : <NotFound />;
 };

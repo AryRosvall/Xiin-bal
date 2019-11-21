@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import gravatar from '../utils/gravatar';
 import '../assets/styles/components/header.scss';
-/* import logo from '../assets/static/user-icon.png'; */
 import userIcon from '../assets/static/user-icon.png';
 import searchIcon from '../assets/static/search.png';
 import { logoutRequest, searchPlace } from '../actions/index';
@@ -27,6 +26,7 @@ const Header = (props) => {
 
   const handleSearch = (searchQuery) => {
     props.searchPlace(searchQuery);
+    props.history.push('/');
   };
 
   return (
@@ -103,4 +103,4 @@ const mapDispatchToProps = {
   searchPlace,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
