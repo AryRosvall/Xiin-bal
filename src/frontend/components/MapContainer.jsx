@@ -56,7 +56,7 @@ class MapContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    places: state.places,
+    places: state.filteredPlaces,
   };
 };
 

@@ -64,16 +64,21 @@ app.post('/auth/sign-in', async (req, res, next) => {
         }
 
         const { token, ...user } = data;
+        res.clearCookie('token');
 
         res.cookie('token', token, {
-          httpOnly: !(ENV === 'development'),
+          httpOnly: false,
+          secure: false,
+          /*  httpOnly: !(ENV === 'development'),
           secure: !(ENV === 'development'),
+          domain: 'xiinbal.com', */
         });
         res.status(200).json(user.user);
       });
     } catch (error) {
       next(error);
     }
+    return true;
   })(req, res, next);
 });
 

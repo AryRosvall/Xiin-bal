@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import googleIcon from '../assets/static/google-icon.png';
-import twitterIcon from '../assets/static/twitter-icon.png';
+/* import googleIcon from '../assets/static/google-icon.png';
+import twitterIcon from '../assets/static/twitter-icon.png'; */
 import { loginUser } from '../actions';
 import '../assets/styles/components/login.scss';
 
@@ -31,15 +31,15 @@ const Login = (props) => {
           <input name='email' className='input' type='text' placeholder='Correo' onChange={handleInput} required />
           <input name='password' className='input' type='password' placeholder='Contraseña' onChange={handleInput} required />
           <button type='submit' className='button'>Iniciar sesión</button>
-          <div className='login__container--remember-me'>
+          {/*  <div className='login__container--remember-me'>
             <label htmlFor='cbox1'>
               <input type='checkbox' id='cbox1' value='first_checkbox' />
                 Recuérdame
             </label>
             <a href='/'>Olvidé mi contraseña</a>
-          </div>
+          </div> */}
         </form>
-        <section className='login__container--social-media'>
+        {/* <section className='login__container--social-media'>
           <div>
             <img alt='googleIcon' src={googleIcon} />
             {' '}
@@ -50,7 +50,7 @@ const Login = (props) => {
             {' '}
           Inicia sesión con Twitter
           </div>
-        </section>
+        </section> */}
         <p className='login__container--register'>
           No tienes ninguna cuenta
           <br />

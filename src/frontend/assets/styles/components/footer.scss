@@ -10,9 +10,8 @@
   position: fixed;
 }
 
-.footer a {
+.footer span {
   color: $font-color;
-  cursor: pointer;
   font-size: 14px;
   padding-left: 30px;
   text-decoration: none;
@@ -20,4 +19,8 @@
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+.footer img {
+  margin-left: 20px;
 }

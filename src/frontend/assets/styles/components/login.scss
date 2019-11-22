@@ -6,52 +6,52 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  //padding: 0px 30px;
   min-height: calc(
-    100vh - 100px
+    100vh - 80px
   ); /* El ancho será igual al tamaño de todo el height menos 200px (100px del header + 100px del footer) */
 }
 
 .login__container {
-  background-color: rgba(255, 255, 255, 0.1);
-  //border: 2px solid white;
+  background-color: $color6;
   border-radius: 2px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  color: white;
-  /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
+  color: $fontcolor1;
   padding: 30px 68px 50px;
   width: 500px;
-  height: 550px;
+  height: 500px;
 }
+
+ .login__container h2 {
+    font-size: 25px;
+  }
 
 .login__container--form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .login__container--form input {
   background-color: rgba(255, 255, 255, 0.3);
   border: 2px;
   border-radius: 3px;
-  color: rgb(72, 72, 72);
+  color: $fontcolor1;
   text-overflow: ellipsis;
   font-family: $font-family;
   font-size: 16px;
   height: 45px;
   outline: none;
   padding: 0px 20px;
-  //width: 100%;
   margin: 10px;
+  margin-bottom: 30px;
 }
 
 .login__container--form button {
-  background-color: $filters-color;
+  background-color: $color2;
   border: 2px;
   border-radius: 3px;
   color: $font-color;
-
+  width: 350px;
   font-family: $font-family;
   font-size: 16px;
   height: 45px;
@@ -60,18 +60,18 @@
 }
 
 .login__container--form label {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .login__container--remember-me {
-  color: white;
+  color: $fontcolor1;
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
 .login__container--remember-me a {
-  color: white;
+  color: $fontcolor1;
   font-size: 14px;
   text-decoration: none;
 }
@@ -97,10 +97,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 90px;
 }
 
 .login__container--register a {
-  color: white;
+  color: $fontcolor1;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;

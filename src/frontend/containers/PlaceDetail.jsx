@@ -21,7 +21,7 @@ const PlaceDetail = (props) => {
   }, []);
 
   const isLookingPlace = Object.keys(lookingPlace).length > 0;
-
+  console.log(Object.keys(lookingPlace).length);
   return isLookingPlace ? (
     <>
       <Filters />

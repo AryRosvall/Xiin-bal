@@ -8,7 +8,7 @@ const Places = (props) => {
 
   return (
     <section className='places'>
-      <h2>{mainView}</h2>
+      <h2 className='places__h2'>{mainView}</h2>
       {children}
     </section>
   );

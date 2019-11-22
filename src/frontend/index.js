@@ -5,8 +5,10 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Router } from 'react-router';
 import { createBrowserHistory } from 'history';
+import Favicon from 'react-favicon';
 import App from './routes/app';
 import reducer from './reducers/index';
+import favicon from './assets/static/favicon/favicon-32x32.png';
 
 if (typeof window !== 'undefined') {
   let composeEnhacers;
@@ -19,6 +21,7 @@ if (typeof window !== 'undefined') {
   hydrate(
     <Provider store={Store}>
       <Router history={history}>
+        <Favicon url={favicon} />
         <App isLogged={(preloadedState.user.id)} />
       </Router>
     </Provider>,

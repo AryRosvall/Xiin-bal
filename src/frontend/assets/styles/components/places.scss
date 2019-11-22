@@ -3,9 +3,13 @@
 .places {
     overflow-y: scroll;
     height: $placesHeight;
+    -ms-overflow-style: none;
   }
   
-  .places h2 {
+  .places__h2 {
     padding-left: 20px;
   }
   
+  .places::-webkit-scrollbar {
+    display: none;
+  }

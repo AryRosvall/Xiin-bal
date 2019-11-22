@@ -3,10 +3,10 @@
 $font-family: "Nunito Sans", sans-serif;
 $color1: #122638;
 $color2: #003459;
-$color3: rgb(221, 131, 40);
+$color3: rgb(231, 112, 15);
 $color4: rgb(44, 112, 196);
 $color5: #fff;
-$color6: rgba(255, 255, 255, 0.5);
+$color6: rgba(255, 255, 255, 0.1);
 $fontcolor1: #fff;
 $fontcolor2: #484848;
 
@@ -21,9 +21,9 @@ $btnSearch:$color4;
 $placeCard-color: rgb(244, 248, 248);
 $placeholderColor:   #484848;
 
-$BGPages: linear-gradient(to bottom right,#E8F1F2, rgb(223, 142, 62));
-$BGRegister: linear-gradient(to bottom right,rgb(223, 142, 62), rgb(10, 6, 17));
-$BGMain: #fff;
+$BGPages: linear-gradient(to bottom right,rgb(223, 142, 62), rgb(151, 48, 1));
+$BGRegister: linear-gradient(to bottom right,rgb(223, 142, 62), rgb(151, 48, 1));
+$BGMain: $color5;
 $BGNotFound: linear-gradient(to bottom right,rgb(223, 142, 62), rgb(5, 12, 15));
 $btnRadius: 2px;
 $placesHeight: 85vh;

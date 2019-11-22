@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const setError = (payload) => {
-  console.log(payload);
   return {
     type: 'SET_ERROR_REQUEST',
     payload,
@@ -23,13 +22,14 @@ export const registerUser = (payload, redirectURL) => {
   };
 };
 
-export const loginRequest = payload => ({
-  type: 'LOGIN_REQUEST',
-  payload,
-});
+export const loginRequest = (payload) => {
+  return ({
+    type: 'LOGIN_REQUEST',
+    payload,
+  });
+};
 
 export const loginUser = ({ email, password }, redirectURL) => {
-
   return (dispatch) => {
     axios({
       url: '/auth/sign-in',
@@ -76,7 +76,7 @@ export const setFavorite = payload => ({
 });
 
 export const saveFavorite = (payload) => {
-
+  console.log(payload, 'payload');
   return (dispatch) => {
     axios({
       url: '/saveFavorites/',

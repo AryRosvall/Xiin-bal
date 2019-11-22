@@ -7,11 +7,13 @@ const reducer = (state, action) => {
         ...state,
         error: action.payload,
       };
-    case 'LOGIN_REQUEST':
+    case 'LOGIN_REQUEST': {
+      console.log('reducer login');
       return {
         ...state,
         user: action.payload,
       };
+    }
     case 'LOGOUT_REQUEST':
       return {
         ...state,

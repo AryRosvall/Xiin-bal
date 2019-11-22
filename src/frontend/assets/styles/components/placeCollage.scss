@@ -1,10 +1,10 @@
 @import "../Base.scss";
 
 .place__collage {
-  background-color: wheat;
+  background-color: #f2f2f2;
   display: grid;
-  grid-template-columns: 50% 25% 25%;
-  grid-template-rows: 50% 50%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+ /*  grid-template-rows: 50% 50%; */
   overflow: hidden;
   height: 300px;
 }
@@ -13,19 +13,19 @@
   grid-row-start: 1;
   grid-row-end: 3;
   cursor: pointer;
-  border: 2px solid #f2f2f2;
+  //border: 2px solid #f2f2f2;
 }
 
 .place__collage--big img {
   -o-object-fit: cover;
   object-fit: cover;
-  width: 100%;
+  width: auto;
   height: auto;
 }
 
-.place__collage--medium {
+/* .place__collage--medium {
   border: 2px solid #f2f2f2;
-}
+} */
 
 .place__collage--medium img {
   -o-object-fit: cover;

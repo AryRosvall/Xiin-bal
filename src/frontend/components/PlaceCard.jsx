@@ -37,14 +37,32 @@ const PlaceCard = (props) => {
             {convertPriceRange(priceRange)}
           </span>
           <span>{address}</span>
-          <div>{schedule}</div>
+          <div>
+            <br />
+            <b>Horario</b>
+            <br />
+            {
+              schedule.map((item, index) => (
+                <span>
+                  {item}
+                  <br />
+                </span>
+              ))
+            }
+            <br />
+          </div>
           <div className='place__card--rating'>
+            <b>Rating: </b>
+            {' '}
             {rating}
             {' '}
             (
             {votes}
             )
           </div>
+
+        </div>
+        <div className='place__card--saveContainer'>
           <button type='button' className='place__card--save' onClick={handleSetFavorite}>Guardar</button>
         </div>
       </div>

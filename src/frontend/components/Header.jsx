@@ -5,6 +5,7 @@ import gravatar from '../utils/gravatar';
 import '../assets/styles/components/header.scss';
 import userIcon from '../assets/static/user-icon.png';
 import searchIcon from '../assets/static/search.png';
+import logoIcon from '../assets/static/origami-bird.png';
 import { logoutRequest, searchPlace } from '../actions/index';
 
 const Header = (props) => {
@@ -32,7 +33,10 @@ const Header = (props) => {
   return (
     <header className='header'>
       <Link to='/'>
-        <span className='header__logo'>Xíinbal</span>
+        <span className='header__logo'>
+          <img src={logoIcon} alt='' />
+          Xíinbal
+        </span>
       </Link>
       <div className='header__search'>
         <div className='header__search--input'>
