@@ -67,11 +67,8 @@ app.post('/auth/sign-in', async (req, res, next) => {
         res.clearCookie('token');
 
         res.cookie('token', token, {
-          httpOnly: false,
-          secure: false,
-          /*  httpOnly: !(ENV === 'development'),
+          httpOnly: !(ENV === 'development'),
           secure: !(ENV === 'development'),
-          domain: 'xiinbal.com', */
         });
         res.status(200).json(user.user);
       });

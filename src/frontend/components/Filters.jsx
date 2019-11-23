@@ -26,7 +26,6 @@ const Filters = (props) => {
       <button type='button' className='filters__btn' onClick={() => handleViewFilter('Nocturna')}>Nocturna</button>
       <button type='button' className='filters__btn' onClick={() => handleViewFilter('Diversión')}>Diversión</button>
       <button type='button' className='filters__btn' onClick={() => handleViewFilter('Compras')}>Compras</button>
-      <button type='button' className='filters__btn' onClick={() => handleViewFilter('Precio')}>Precio</button>
       <button type='submit' className='filters__btn' onClick={handleViewFavorites}>Favoritos</button>
       <button type='submit' className='filters__btn' onClick={() => handleViewFilter('All')}>Todos</button>
     </section>
