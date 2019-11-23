@@ -90,6 +90,7 @@ ul:hover {
   background: $color5;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  width: 50%;
 }
 
 .header__search--input input {
@@ -153,7 +154,7 @@ ul:hover {
 
 .header__search--btnIcon{
   width: 30px;
-  margin: 10px 0 5px 0;
+  margin: 10px 10px 5px 0;
 }
 
 .header__search--categories_btn {
