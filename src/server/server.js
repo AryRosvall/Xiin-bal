@@ -67,8 +67,11 @@ app.post('/auth/sign-in', async (req, res, next) => {
         res.clearCookie('token');
 
         res.cookie('token', token, {
-          httpOnly: !(ENV === 'development'),
+          httpOnly: false,
+          secure: false,
+          /*  httpOnly: !(ENV === 'development'),
           secure: !(ENV === 'development'),
+          domain: 'xiinbal.com', */
         });
         res.status(200).json(user.user);
       });
@@ -136,6 +139,7 @@ app.post('/saveFavorites/', async (req, res, next) => {
     next(error);
   }
 });
+
 /* router.post('/',
   passport.authenticate('jwt', { session: false }),
   scopesValidationHandler(['create:user-places']),
