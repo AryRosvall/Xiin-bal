@@ -16,6 +16,8 @@ const Header = (props) => {
 
   const hasUser = user !== undefined ? Object.keys(user).length > 0 : false;
 
+  const headerStyle = hasUser ? 'header__search' : 'header__hidden';
+
   const handleLogout = () => {
     document.cookie = 'email=';
     document.cookie = 'name=';
@@ -38,7 +40,7 @@ const Header = (props) => {
           Xíinbal
         </span>
       </Link>
-      <div className='header__search'>
+      <div className={headerStyle}>
         <div className='header__search--input'>
           <input type='text' className='input' placeholder='Buscar...' onInput={e => setsearchQuery(e.target.value)} />
         </div>
