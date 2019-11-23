@@ -40,6 +40,7 @@
   position: absolute;
   width: 100px;
   text-align: right;
+ 
 }
 
 .header__menu:hover ul,
@@ -67,10 +68,16 @@ ul:hover {
   cursor: pointer;
 }
 
-.header__menu--profile img {
+
+.header__menu--gravatar{
   margin-right: 8px;
   width: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border: 2px solid rgb(219, 219, 219);
 }
+
 
 .header__search {
   position: relative;

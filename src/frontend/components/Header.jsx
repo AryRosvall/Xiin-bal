@@ -14,7 +14,7 @@ const Header = (props) => {
 
   const [searchQuery, setsearchQuery] = useState('');
 
-  const hasUser = Object.keys(user).length > 0;
+  const hasUser = user !== undefined ? Object.keys(user).length > 0 : false;
 
   const handleLogout = () => {
     document.cookie = 'email=';
@@ -59,38 +59,40 @@ const Header = (props) => {
         <div className='header__menu--profile'>
           {
             hasUser ?
-              <img src={gravatar(user.email)} alt={user.email} /> :
-              <img src={userIcon} alt='' />
+              <img className='header__menu--gravatar' src={gravatar(user.email)} alt={user.email} /> :
+              <img className='header__menu--gravatar' src={userIcon} alt='' />
           }
           <p>Perfil</p>
         </div>
-        <ul>
-          {
-            hasUser ? (
-              <li>
-                <Link to='/profile'>
-                  {user.name}
-                </Link>
-              </li>
-            ) :
-              null
-          }
-          {
-            hasUser ? (
-              <li>
-                <Link to='#Logout' onClick={handleLogout}>
+        <div className='header__menu--dropdown'>
+          <ul>
+            {
+              hasUser ? (
+                <li>
+                  <Link to='/profile'>
+                    {user.name}
+                  </Link>
+                </li>
+              ) :
+                null
+            }
+            {
+              hasUser ? (
+                <li>
+                  <Link to='#Logout' onClick={handleLogout}>
                                         Cerrar Sesión
-                </Link>
-              </li>
-            ) : (
-              <li>
-                <Link to='/login'>
+                  </Link>
+                </li>
+              ) : (
+                <li>
+                  <Link to='/login'>
                                         Iniciar Sesión
-                </Link>
-              </li>
-            )
-          }
-        </ul>
+                  </Link>
+                </li>
+              )
+            }
+          </ul>
+        </div>
       </div>
     </header>
   );

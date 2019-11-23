@@ -11,12 +11,14 @@ const PlaceDescription = (props) => {
   return (
     <section className='placeDetail__description'>
       <h1>{name}</h1>
-      <div>
-        <h2>{type}</h2>
-        {' '}
-          |
-        {' '}
-        <h2>{convertPriceRange(priceRange)}</h2>
+      <div className='placeDetail__type'>
+        <b>
+          {type}
+          {'  '}
+            |
+          {' '}
+          {convertPriceRange(priceRange)}
+        </b>
       </div>
       <h3>Dirección</h3>
       <div>{address}</div>
@@ -27,7 +29,8 @@ const PlaceDescription = (props) => {
       <h3>Horario</h3>
       {
         schedule.map((item, index) => (
-          <div className='placeDetail__schedule' id={index}>
+          // eslint-disable-next-line react/no-array-index-key
+          <div className='placeDetail__schedule' id={index} key={index}>
             {item}
           </div>
         ))

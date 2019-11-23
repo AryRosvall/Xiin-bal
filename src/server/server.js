@@ -122,7 +122,7 @@ app.post('/saveFavorites/', async (req, res, next) => {
 
   const { body: data } = req;
   console.log(data.userId, 'save favorite');
-  let places;
+
   try {
     await axios({
       url: `${config.apiUrl}/api/user-places/`,
@@ -139,7 +139,6 @@ app.post('/saveFavorites/', async (req, res, next) => {
     next(error);
   }
 });
-
 /* router.post('/',
   passport.authenticate('jwt', { session: false }),
   scopesValidationHandler(['create:user-places']),

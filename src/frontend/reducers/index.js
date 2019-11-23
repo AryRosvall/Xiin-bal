@@ -2,13 +2,11 @@
 const reducer = (state, action) => {
   switch (action.type) {
     case 'SET_ERROR_REQUEST':
-      console.log('error', action.payload);
       return {
         ...state,
         error: action.payload,
       };
     case 'LOGIN_REQUEST': {
-      console.log('reducer login');
       return {
         ...state,
         user: action.payload,

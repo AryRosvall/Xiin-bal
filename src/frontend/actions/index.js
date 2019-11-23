@@ -76,7 +76,6 @@ export const setFavorite = payload => ({
 });
 
 export const saveFavorite = (payload) => {
-  console.log(payload, 'payload');
   return (dispatch) => {
     axios({
       url: '/saveFavorites/',

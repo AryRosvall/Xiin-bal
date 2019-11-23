@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { getFavorites, getPlaces } from '../actions/index';
+import { getFavorites, getPlaces } from '../actions';
 import { getCookie } from '../utils/helpers';
 import '../assets/styles/components/filters.scss';
 

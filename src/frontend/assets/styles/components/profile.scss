@@ -40,7 +40,7 @@
   }
   
   .profile__data{
-    margin: 30px 0 0 300px;
+    margin: 15px 0 0 300px;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -50,6 +50,7 @@
   
   display:flex;
   flex-flow: row nowrap;
+  overflow-y: scroll;
   } 
   
   .profile__data .input{
@@ -58,9 +59,9 @@
     margin-bottom: 15px;
   }
 
-.profile__data h1{
+/* .profile__data h1{
   margin-top: 50px;
-}
+} */
  
 .profile__data--edit{
   cursor: pointer;

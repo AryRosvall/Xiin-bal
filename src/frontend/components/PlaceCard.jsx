@@ -2,8 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { saveFavorite, deleteFavorite } from '../actions';
-import '../assets/styles/components/placecard.scss';
 import { convertPriceRange, getCookie } from '../utils/helpers';
+import favoriteIcon from '../assets/static/favorite.png';
+import '../assets/styles/components/placecard.scss';
 
 const PlaceCard = (props) => {
 
@@ -42,12 +43,15 @@ const PlaceCard = (props) => {
             <b>Horario</b>
             <br />
             {
-              schedule.map((item, index) => (
-                <span>
-                  {item}
-                  <br />
-                </span>
-              ))
+              schedule.map((item, index) => {
+                return (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                );
+              })
             }
             <br />
           </div>
@@ -63,7 +67,7 @@ const PlaceCard = (props) => {
 
         </div>
         <div className='place__card--saveContainer'>
-          <button type='button' className='place__card--save' onClick={handleSetFavorite}>Guardar</button>
+          <img className='place__card--favorite' src={favoriteIcon} alt='' onClick={handleSetFavorite} />
         </div>
       </div>
 
